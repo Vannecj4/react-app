@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import axios from "axios"
+import FormattedDate from "./FormattedDate";
+import axios from "axios";
 import "./Weather.css";
 
 
@@ -17,7 +18,7 @@ humidity:response.data.main.humidity,
 city: response.data.name,
 iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
 description: response.data.weather[0].description,
-date: "fecha!!",
+date:new Date(response.data.dt * 1000),
 
 
 
@@ -41,7 +42,9 @@ return (
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-        <li> {weatherData.date}  07:00</li>
+        <li> 
+            <FormattedDate date={weatherData.date} />
+        </li>
         <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
