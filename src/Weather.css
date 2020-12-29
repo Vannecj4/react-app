@@ -3,7 +3,7 @@
   font-family: Arial, sans-serif;
   color: rgb(135, 135, 135);
   padding: 16px;
-
+  background-color: #ddf3fc;
   border-radius: 4px;
 }
 
@@ -16,6 +16,7 @@
   font-weight: 100;
   line-height: 29px;
   margin: 20px 0 0 0;
+  color: #0069d9;
 }
 
 .Weather ul {
